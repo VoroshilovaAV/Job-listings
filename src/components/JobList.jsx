@@ -6,10 +6,10 @@ import { selectFilters } from 'store/filters/filter-selectors'
 import { addFilter } from 'store/filters/filter-actions'
 
 const JobList = () => {
-  const positions = useSelector((state) => {
-    selectVisiblePositions(state, currentFilters);
-  });
   const currentFilters = useSelector(selectFilters);
+  const positions = useSelector((state) => (
+    selectVisiblePositions(state, currentFilters)
+  ));
   const dispatch = useDispatch();
 
   const handleAddFilter = (filter) => {
@@ -21,8 +21,8 @@ const JobList = () => {
       {positions.map(item => (
         <JobPosition 
           key={item.id} 
-          {...item}
           handleAddFilter = {handleAddFilter}
+          {...item}
         />
       ))}
     </div>
