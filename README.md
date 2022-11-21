@@ -7,7 +7,7 @@
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
 
-#### Tech
+### Tech
 
 - React
 - Redux
@@ -15,6 +15,6 @@
 - CSS
 - Webpack
 
-#### Deploy
+### Deploy
 
 https://job-listings-with-filters.netlify.app/
